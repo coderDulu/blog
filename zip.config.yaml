@@ -1,0 +1,33 @@
+# 输出配置
+output:
+  zip:
+    # 打包后的文件名
+    name: output/deploy.zip
+    # 压缩级别 (0-9, 9为最大压缩)
+    compression: 9
+
+# 目录配置
+dirs:
+  # 静态资源目录配置
+  static:
+    # 源目录路径
+    src: .next/static
+    # 目标目录路径
+    dest: .next/standalone/.next/static
+  
+  # 公共资源目录配置
+  public:
+    # 源目录路径
+    src: public
+    # 目标目录路径
+    dest: .next/standalone/public
+  
+  # standalone 输出目录
+  standalone: .next/standalone
+
+# 日志配置
+logging:
+  # 是否启用日志
+  enabled: true
+  # 日志级别 (debug, info, warn, error)
+  level: info
